@@ -3,10 +3,10 @@ const useStore = (() => {
     var storeInstance;
     const createStoreInstance = () => {
         var storeData = "My Initial Data";
-        getStore = () => {
+        const getStore = () => {
             return storeData;
         }
-        setStore = (data) => {
+        const setStore = (data) => {
             storeData = data;
             return storeData;
         }
