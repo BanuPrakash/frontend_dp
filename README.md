@@ -97,3 +97,9 @@ You often see this with components like select, dropdown components, or menu ite
 ```
 
 Prototype:
+* Serializer
+* Object.create()
+
+React.createElement() core API to create React Elements; output of render() or return value of function is fed to React.createElement()
+
+React.cloneElement() 

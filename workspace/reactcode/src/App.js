@@ -1,37 +1,25 @@
+import React from 'react'
 
-import './App.css';
-import React, { useEffect, useState } from 'react';
-
-const withLoader = (Element, url) => {
-  return props => {
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    fetch(url).then(response => response.json())
-    .then(data =>  setData(data.message))
-    
-  }, []);
-
-   if(!data) {
-    return  <div>Loading!!!</div>
-   }
-
-  return <Element data={data}/>;
-}
-}
-const DogView = (props) => {
-  return <div>
-    <img src ={props.data} />
-  </div>
+const SpanWithText = ({ text, ...props }) => {
+  return <span {...props}>
+    {text}
+  </span>
 }
 
-const DogViewWithLoader = withLoader(DogView, 'https://dog.ceo/api/breeds/image/random');
-function App() {
+const Colored = ({ children }) => {
+  return React.cloneElement(children, {
+    style: {
+      backgroundColor: 'khaki',
+      color: 'brown'
+    },
+    onClick: () => alert("Clicked")
+  })
+}
+export default function () {
   return (
-    <div className="App">
-      <DogViewWithLoader />
-    </div>
-  );
-}
+    <Colored>
+      <SpanWithText text="Hello React Span Comp!!!" />
+    </Colored>
 
-export default App;
+  )
+}
