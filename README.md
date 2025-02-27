@@ -1,4 +1,4 @@
-# Frontend Design Patterns
+# Frontend Design Patterns with JavaScript and TypeScript
 
 Banuprakash C
 
@@ -14,7 +14,9 @@ https://github.com/BanuPrakash/frontend_dp
 
 Softwares Required:
 Visual Studio Code.
+
 Chrome Web Browser
+
 NodeJS Latest LTS
 
 
@@ -46,3 +48,21 @@ NodeJS Latest LTS
     * Observer
 
 ========
+
+
+Dependency Injection:
+InversifyJS, TypedDI, TSyringe, ...
+
+di> npm init --y
+di> npm i typescript inversify reflect-metadata
+di> tsc --init
+
+BookRepo interface
+BookRepoImpl class
+
+BookService
+
+BookController
+
+index.ts
+
