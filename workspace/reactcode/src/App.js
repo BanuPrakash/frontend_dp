@@ -1,4 +1,6 @@
 import React from 'react'
+import Input from './components/Input'
+import Display from './components/Display'
 
 const SpanWithText = ({ text, ...props }) => {
   return <span {...props}>
@@ -17,9 +19,12 @@ const Colored = ({ children }) => {
 }
 export default function () {
   return (
-    <Colored>
+    <div>
+      {/* <Colored>
       <SpanWithText text="Hello React Span Comp!!!" />
-    </Colored>
-
+    </Colored> */}
+    <Input />
+    <Display />
+    </div>
   )
 }
