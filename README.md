@@ -68,5 +68,14 @@ index.ts
 
 ======
 
-Resume @ 11:30
+Form Builder in React typescript
 
+    let elements = FormBuilder()
+    .input({"label": "Name})
+    .input({"label": "Email})
+    .checkbox({"label": "Subscribe for Newsletter})
+    .build();
+
+   =======
+
+ yarn create react-app react-formbuilder --template typescript
