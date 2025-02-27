@@ -79,3 +79,20 @@ Form Builder in React typescript
    =======
 
  yarn create react-app react-formbuilder --template typescript
+
+Compound Pattern:
+In our application, we often have components that belong to each other. 
+They’re dependent on each other through the shared state, and share logic together. 
+You often see this with components like select, dropdown components, or menu items. The compound component pattern allows you to create components that all work together to perform a task.
+
+```
+{
+                showProfile && ( <p className='text-sm text-neutral-400'>
+                    {post.user.name}
+                </p>)
+}
+ <PostCard 
+      showProfile
+      post={{
+```
+
