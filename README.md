@@ -175,7 +175,7 @@ a) get trap()
 b) set trap()
 c) apply trap()
 
-
+```
 let product = {
     "name" : "A"
 }
@@ -190,3 +190,6 @@ function update(name) {
 
 update.call(user, "Shyam"); or update.apply(user, ["shyam"]);
 update.call(product, "Mac");
+```
+====
+Decorator Pattern
