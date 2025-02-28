@@ -174,3 +174,19 @@ The Proxy object enables you to create a proxy for another object, which can int
 a) get trap()
 b) set trap()
 c) apply trap()
+
+
+let product = {
+    "name" : "A"
+}
+
+let user = {
+    "name": "Raj"
+}
+
+function update(name) {
+    this.name = name;
+}
+
+update.call(user, "Shyam"); or update.apply(user, ["shyam"]);
+update.call(product, "Mac");
