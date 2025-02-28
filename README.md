@@ -197,3 +197,69 @@ Decorator Pattern
 
 Decorator is a structural design pattern that lets you attach new behaviors to objects by placing these objects inside special wrapper objects that contain the behaviors.
 
+
+Flyweight:
+
+Flyweight Classes: represents objects that can be shared.
+
+```
+new Product("Dell", "XPS", "Intell", "TSF@", "4GB", "P1");
+new Product("Dell", "XPS", "Intell", "PLE", "8GB", "P2");
+new Product("Dell", "XPS", "Intell", "LOCA", "32GB", "P1");
+new Product("Dell", "XPS", "Intell", "KICS", "16GB", "P1");
+```
+
+Flyweight factory has to cache and return Flyweight objects
+
+Composite Pattern:
+Composite is a structural design pattern that lets you compose objects into tree structures and then work with these structures as if they were individual objects.
+
+// BookComponent
+// BookGroup [ Composite]
+// Book [ leaf]
+
+```
+class BookComponent {
+    add(bookComponent) {
+        //
+    }
+
+    print() {
+        // 
+    }
+}
+
+class Book extends BookComponent {
+    constructor(title, author, price) {
+
+    }
+    add(bookComponent) {
+        //
+    }
+    print() {
+        console.log(title, author, price);
+    }
+}
+
+class BookGroup extends BookComponent {
+    constructor(group) {
+        ..
+        this.books = [];
+    }
+
+    add(bookComponent) {
+        this.books.push(bookComponent); // can be a group or book
+    }
+
+    print() {
+        this.books.forEach(book => book.print());
+    }
+}
+```
+
+Behavioral design patterns are a category of design patterns that focus on the interactions and communication between objects.
+
+* Vistor Pattern
+
+
+
