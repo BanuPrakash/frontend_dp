@@ -34,17 +34,19 @@ NodeJS Latest LTS
     * Prototype
     * Singleton
 * Structural Pattern
+    * Bridge
+    * Proxy
     * Decorator Pattern
     * Facade Pattern
     * Adapter
-    * Bridge
     * Composite
     * Flyweight
-    * Proxy
+  
 * Behavioural 
     * Command
-    * Chain Of Responsibility 
     * Visitor
+    * Iterator
+    * Chain Of Responsibility 
     * Observer
 
 ========
@@ -87,9 +89,9 @@ You often see this with components like select, dropdown components, or menu ite
 
 ```
 {
-                showProfile && ( <p className='text-sm text-neutral-400'>
-                    {post.user.name}
-                </p>)
+ showProfile && ( <p className='text-sm text-neutral-400'>
+    {post.user.name}
+ </p>)
 }
  <PostCard 
       showProfile
@@ -103,3 +105,72 @@ Prototype:
 React.createElement() core API to create React Elements; output of render() or return value of function is fed to React.createElement()
 
 React.cloneElement() 
+
+Why abstract factory?
+
+```
+class FurnitureFactory {
+    // factory Methods
+    getChair() {
+
+    }
+
+    getSofa() {
+
+    }
+
+    getCoffeeTable() {
+
+    }
+}
+```
+
+
+Day 2:
+
+Structural Design Pattern
+Organizing class / objects 
+
+ * Bridge
+ * Proxy
+ * Decorator Pattern
+ * Facade Pattern
+ * Adapter
+ * Composite
+ * Flyweight
+
+The Bridge design pattern allows you to separate the abstraction from the implementation. 
+It is a structural design pattern. 
+There are 2 parts in Bridge design pattern : 
+Abstraction
+Implementation
+
+Without BridgePattern
+Resources: Album, Artist, PlayList
+Views: ShortView, LongView, ConceptualView
+
+Using Inheritance:
+View --> abstract class
+ShortViewArtist
+LongViewArtist
+ConceptualViewArtist
+ShortViewAlbum
+LongViewAlbum
+ConceptualViewAlbum
+ShortViewPlayList
+LongViewPlaylist
+ConceptualViewPlaylist
+
+--------
+
+Proxy pattern:
+in place of original object
+Why? logging, validation, caching, lazy loading ...
+
+Value Proxy
+
+ES 6 Proxy:
+The Proxy object enables you to create a proxy for another object, which can intercept and redefine fundamental operations for that object.
+a) get trap()
+b) set trap()
+c) apply trap()
