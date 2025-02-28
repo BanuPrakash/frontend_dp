@@ -1,7 +1,15 @@
 import React, { useEffect, useState } from 'react'
 
-function withHover() {
+function withHover(Element) {
+    return (props) => {
+        let [hovering, setHovering] = useState();
 
+        return <Element {...props}
+            hovering={hovering}
+            onMouseEnter={() => setHovering(true)}
+            onMouseLeave={() => setHovering(false)}
+        />
+    }
 }
 function withLoading(Element, url) {
     return (props) => {
@@ -23,7 +31,8 @@ function withLoading(Element, url) {
 function DogImage(props) {
     return (
         <div>
-            <img src={props.data.message} />
+            {props.hovering && <div>Hovering...</div>}
+            <img src={props.data.message} {...props}/>
         </div>
     )
 }
