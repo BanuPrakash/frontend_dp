@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import FormBuilder from './builder/FormBuilder';
 import PostCard from './components/PostCard';
+import CommandApp from './command/CommandApp';
 
 function App() {
   let elements = new FormBuilder()
@@ -14,6 +15,7 @@ function App() {
 
   return (
     <div className="App">
+      <CommandApp />
        {elements} 
       <PostCard 
     

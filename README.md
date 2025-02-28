@@ -267,3 +267,9 @@ Babel Visitor Pattern
 
 npm init --y
 npm i babel-cli babel-loader
+
+============
+
+Command Pattern:
+The Command Design Pattern is a behavioral design pattern that turns a request into a stand-alone object called a command. It support operations like undo.
+

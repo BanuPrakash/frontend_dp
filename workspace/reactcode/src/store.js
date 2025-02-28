@@ -1,23 +1,33 @@
-// singleton store
-const useStore = (() => {
-    var storeInstance;
+export const useStore = (() => {
+    let storeInstance;
+    let subscriptions = [];
     const createStoreInstance = () => {
-        var storeData = "My Initial Data";
+        let store = 'My Initial Data';
+
         const getStore = () => {
-            return storeData;
+            return store;
         }
-        const setStore = (data) => {
-            storeData = data;
-            return storeData;
+
+        const setStore = (newStore) => {
+            store = newStore;
+            subscriptions.forEach(fn => fn());
+
+            return store;
         }
-        return [getStore, setStore]; // subscribe, unsubscribe
+        const subscribe = (fn) => {
+            subscriptions.push(fn);
+        }
+
+        const unsubscribe = (fn) => {
+            let index = subscriptions.indexOf(fn);
+            subscriptions.slice(index, 1);
+        }
+        return [getStore, setStore, subscribe, unsubscribe];
     }
     return () => {
-        if(!storeInstance) {
+        if (!storeInstance) {
             storeInstance = createStoreInstance();
         }
         return storeInstance;
     }
-})(); // IIFE
-
-export default useStore;
+}) (); //IIFE
