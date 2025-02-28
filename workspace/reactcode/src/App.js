@@ -1,6 +1,7 @@
 import React from 'react'
 import Input from './components/Input'
 import Display from './components/Display'
+import DogImage from './components/DogImage'
 
 const SpanWithText = ({ text, ...props }) => {
   return <span {...props}>
@@ -23,8 +24,9 @@ export default function () {
       {/* <Colored>
       <SpanWithText text="Hello React Span Comp!!!" />
     </Colored> */}
-    <Input />
-    <Display />
+    {/* <Input />
+    <Display /> */}
+    <DogImage />
     </div>
   )
 }
